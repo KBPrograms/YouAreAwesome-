@@ -16,8 +16,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You Are Awesome!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I6k-Ds-AKh">
-                                <rect key="frame" x="94" y="162" width="209" height="29"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XCM-TT-bTb">
+                                <rect key="frame" x="127" y="291" width="139" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Show Message"/>
+                                <connections>
+                                    <action selector="messageButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rSL-7v-FK1"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Press the button to reveal the secret message ..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I6k-Ds-AKh">
+                                <rect key="frame" x="94" y="162" width="209" height="86"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -27,10 +35,15 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="I6k-Ds-AKh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="94" id="Hi9-fE-nEa"/>
+                            <constraint firstItem="XCM-TT-bTb" firstAttribute="top" secondItem="I6k-Ds-AKh" secondAttribute="bottom" constant="43" id="QtU-RJ-iuI"/>
                             <constraint firstItem="I6k-Ds-AKh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="103" id="WxX-ui-cJu"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="I6k-Ds-AKh" secondAttribute="trailing" constant="90" id="iyB-wL-QKT"/>
+                            <constraint firstItem="XCM-TT-bTb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="liJ-Xi-Cwk"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="messageLabel" destination="I6k-Ds-AKh" id="2tv-yd-3Ik"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
